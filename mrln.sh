@@ -1,8 +1,7 @@
 #!/bin/bash -e
 
-#panin igaks juhuks, äkki on abiks#
-eval "$(conda shell.bash hook)"
-conda activate mrln_et
+# eval "$(conda shell.bash hook)"
+# conda activate mrln_et
 ###################################
 
 merlin_dir=$(pwd)
