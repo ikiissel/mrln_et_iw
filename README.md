@@ -12,6 +12,10 @@
               https://github.com/Filosoft/vabamorf                 
 
 ==============================================================================
+## SISEND
+
+- mingi selgitus kraakade kohta
+
 ## INSTALL
 
 - välised sõltuvused
