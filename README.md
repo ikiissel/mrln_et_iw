@@ -14,7 +14,10 @@
 ==============================================================================
 ## SISEND
 
-- mingi selgitus kraakade kohta
+  * `<` silp on kolmandas vältes; asetseb vahetult silbi tuuma moodustava täishääliku ees
+  * `?` silp on rõhuline; asetseb vahetult silbi tuuma moodustava täishääliku ees (silbi rõhulisust märgitakse ainult sellisel juhul, kui rõhuline silp on midagi muud kui võiks ennustada, ja ennustamine käib järgmiselt: kui sõnas on kolmandas vältes silp, siis rõhk on sellel; muidu, kui sõnas on pika täishääliku või täishäälikuühendiga silp, siis rõhk on sellel; muidu on rõhk esimesel silbil) 
+  * `]` eelmine häälik on palataliseeritud
+  * `_` liitsõnapiir
 
 ## INSTALL
 
