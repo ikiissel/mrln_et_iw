@@ -822,11 +822,6 @@ CFSArray<CFSWString> do_all(CFSWString utt, bool print_label, bool print_utt) {
 	CFSArray<CFSWString> res, TempA;
 	CFSArray<CPTWord> PTW;
 	TUtterance TU;
-        
-        
-        if (utt.GetLength() > 1) 
-               utt = PrepareTokens(utt);
-        
 
 	explode(utt, L" ", TempA);
 
@@ -843,37 +838,45 @@ CFSArray<CFSWString> do_all(CFSWString utt, bool print_label, bool print_utt) {
 	for (INTPTR i = 0; i < MRs.GetSize(); i++) {
 		TWord TW;
 		TW.Token = MRs[i].m_szWord;
-		
-                CFSWString pc = TW.Token.GetAt(TW.Token.GetLength() - 1);
-                if (is_ending(pc) && i == MRs.GetSize()-1) {
-                    if (pc == L"?") UttType = 3;
-                        else
-                    if (pc == L"!") UttType = 2;
-                        else
-                    UttType = 1;
-                    //P.prnn(pc);
-                    TW.Token.Delete(TW.Token.GetLength() - 1, 1);
-                }
-                
+		                
                 
                 TW.TWMInfo = MRs[i].m_MorphInfo[0];
 		TW.AddEndings();
+                
+                CFSWString res = L"";
+              	INTPTR l = TempA[i].GetLength();
+                
+                
+
+                TW.TWMInfo.m_szRoot = TempA[i];
+                TW.Token = TempA[i];
+
+
+                
+                
 		TU.TWA.AddItem(TW);
+                
+                for (int j = 0; j < MRs[i].m_MorphInfo.GetSize(); j ++) {
+                   //P.prnn(L"\t> " + MRs[i].m_MorphInfo[j].m_szRoot +MRs[i].m_MorphInfo[j].m_szEnding);
+                    
+                   //P.prnn(MRs[i].m_szWord);
+                }
                 
                 
 	}
         
         
         TU.UttT = UttType;
-	TU.AnalyzeText();
+				TU.AnalyzeText();
         TU.Syllabify();
         TU.Phrasing();
-	TU.Calculate();
+				TU.Calculate();
         TU.PhoneArray();
 
         
         for (INTPTR i = 0; i < TU.TPA.GetSize(); i++) {
 		res.AddItem(TU.TPA[i].Phone);
+
                 
                 
 

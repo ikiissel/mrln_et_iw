@@ -47,6 +47,6 @@ python ${merlin_dir}/src/run_merlin.py ${merlin_dir} ${temp_dir} ${voice} ${in_t
 ```
 - vaata näidet failis `mrln.sh`
 
-- Hääled on saadaval https://www.eki.ee/~indrek/mrln_et Allalaaditud hääled tuleks lahti pakkida `voices/` kausta.
+- Hääl on saadaval https://arhiiv.eki.ee/~indrek/mahukadasjad/evas_art_48k.tar.xz Allalaaditud hääled tuleks lahti pakkida `voices/` kausta.
 
 
